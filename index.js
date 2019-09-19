@@ -1,4 +1,4 @@
-const {stripCwd, getHeadRef, getRepoURL, markdown} = require('stylelint-formatter-utils')
+const {stripCwd, getHeadRef, getRepoURL} = require('stylelint-formatter-utils')
 const {MarkdownTable, link} = require('stylelint-formatter-utils/markdown')
 
 module.exports = function stylelintFormatterMarkdown(results) {
