@@ -1,4 +1,5 @@
-const {MarkdownTable, stripCwd, getHeadRef, getRepoURL} = require('stylelint-formatter-utils')
+const {stripCwd, getHeadRef, getRepoURL} = require('stylelint-formatter-utils')
+const {MarkdownTable, link} = require('stylelint-formatter-utils/markdown')
 
 module.exports = function stylelintFormatterMarkdown(results) {
   const repoURL = getRepoURL()
@@ -25,9 +26,5 @@ module.exports = function stylelintFormatterMarkdown(results) {
   function href({source, line}) {
     const fragment = line ? `#L${line}` : ''
     return `${repoURL}/blob/${headRef}/${source}${fragment}`
-  }
-
-  function link(text, url) {
-    return `[${text}](${url})`
   }
 }
